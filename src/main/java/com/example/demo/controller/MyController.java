@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.beans.User;
 
-@RestController
+@Controller
 public class MyController {
     @Autowired
 	private UserService userService;
