@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'spring-boot-web'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_63738D7935654DA1B3B24728CFF01700 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8C142B8F26A1440FB3421E78950352B1 }}
           package: '*.jar'
