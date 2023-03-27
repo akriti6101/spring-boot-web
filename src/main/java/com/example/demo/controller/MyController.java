@@ -20,21 +20,21 @@ public class MyController {
 	
 	@GetMapping("/")
 	public String home() {
-		return "view/home.jsp";
+		return "home";
 	}
 	@GetMapping("/register")
 	public String registrationPage() {
-		return "view/Register.jsp";
+		return "Register";
 	}
 	@PostMapping("/registerData")
 	public String registerData(@ModelAttribute("user") User user) {
 		userService.registerData(user);
-		return "view/home.jsp";
+		return "home";
 	}
 	@GetMapping("/showData")
 	public String showData(Model model) {
 		List<User> users=userService.showData();
 		model.addAttribute("users", users);
-		return "view/showUsers.jsp";
+		return "showUsers";
 	}
 }
