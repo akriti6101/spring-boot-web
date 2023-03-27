@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,11 +18,11 @@ public class MyController {
     @Autowired
 	private UserService userService;
 	
-	@RequestMapping("/")
+	@GetMapping("/")
 	public String home() {
 		return "home";
 	}
-	@RequestMapping("/register")
+	@GetMapping("/register")
 	public String registrationPage() {
 		return "Register";
 	}
@@ -30,7 +31,7 @@ public class MyController {
 		userService.registerData(user);
 		return "home";
 	}
-	@RequestMapping("/showData")
+	@GetMapping("/showData")
 	public String showData(Model model) {
 		List<User> users=userService.showData();
 		model.addAttribute("users", users);
